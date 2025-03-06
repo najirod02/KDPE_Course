@@ -6,4 +6,4 @@ List of assignments:
 - The Reichenbach Reckoning: Sherlock Holmes’ Mathematical Mysteries - Deadline March 20
 
 # Authors
-Dorijan Di Zepp [226865] dorijan.dizepp@studenti.unitn.it
+Dorijan Di Zepp [257827] dorijan.dizepp@studenti.unitn.it

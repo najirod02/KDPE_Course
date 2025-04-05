@@ -15,6 +15,8 @@ List of exercises, each with the proposed solution
 - [Ex12](#12-the-buckets-of-bohemia)
 - [Coding](#2---coding)
 
+[Back to list of assignments](../README.md)
+
 # 1 - Written problems
 
 ## 1 - The seating of the Diogenes Club

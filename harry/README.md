@@ -37,27 +37,27 @@ $$
 We can apply the bayes rule in order to find the posterior given the prior and our knowledge.
 
 $$
-p(D|I) = \frac{p(I|D)*p(D)}{p(I)}
+f(D|I) = \frac{f(I|D)*f(D)}{f(I)}
 $$
 
-in particular we can say that p(I) is a constant and so can be "leaved" outside the computations. p(D) is already known, N(98,16) while p(I|D) can be found in a similar way as done in the previous point. \
-p(I|D) is the likelihood of reading a certain distance after we defined the real distance with our belief meanign that p(I|D) ~ N(D,4) ~ N(100,4).\
+in particular we can say that f(I) is a constant and so can be "leaved" outside the computations. f(D) is already known, N(98,16) while f(I|D) can be found in a similar way as done in the previous point. \
+f(I|D) is the likelihood of reading a certain distance after we defined the real distance with our belief meanign that f(I|D) ~ N(D,4) ~ N(100,4).\
 As we have at the denominator a constant, we have to just multiply the Gaussians meanign that we obtain as posterior another Gaussian that is:
 
-- Prior belief p(D) is already known: N(98,16), meaning our initial belief about the true distance is a Gaussian distribution with mean 98 and variance 16.
+- Prior belief f(D) is already known: N(98,16), meaning our initial belief about the true distance is a Gaussian distribution with mean 98 and variance 16.
 
-- Likelihood p(I∣D) represents the probability of the instrument reading I given the  distance D. Since we know that the instrument reading is the distance D plus Gaussian noise with variance 4, we can model this as a Gaussian distribution: p(I∣D)∼N(D,4) \
+- Likelihood f(I∣D) represents the probability of the instrument reading I given the  distance D. Since we know that the instrument reading is the distance D plus Gaussian noise with variance 4, we can model this as a Gaussian distribution: f(I∣D)∼N(D,4) \
 
-Since p(I) is constant, we do not need to compute it in the Bayes' update. This allows us to focus on multiplying the prior p(D) and the likelihood p(I∣D). The result of multiplying these Gaussians is another Gaussian distribution, which gives us our posterior. 
+Since f(I) is constant, we do not need to compute it in the Bayes' update. This allows us to focus on multiplying the prior f(D) and the likelihood f(I∣D). The result of multiplying these Gaussians is another Gaussian distribution, which gives us our posterior. 
 
 $$
-p(D \mid I) \sim k * \left( \frac{1}{\sqrt{4\pi}} \exp\left( -\frac{(I - D)^2}{8} \right) \right) \left( \frac{1}{\sqrt{32\pi}} \exp\left( -\frac{(D - 98)^2}{32} \right) \right)
+f(D \mid I) \sim k * \left( \frac{1}{\sqrt{4\pi}} \exp\left( -\frac{(I - D)^2}{8} \right) \right) \left( \frac{1}{\sqrt{32\pi}} \exp\left( -\frac{(D - 98)^2}{32} \right) \right)
 $$
 
 And by applying the rule product of two Gaussians we obtain the new mean and variance obtainign as the final distribution:
 
 $$
-p(D \mid I) \sim k * N(99.6, 3.2)
+f(D \mid I) \sim k * N(99.6, 3.2)
 $$
 
 Thus, the posterior belief is a Gaussian distribution with a mean of 99.6 and a reduced variance of 3.2, indicating that our confidence in the true distance has increased as we have a much smaller variance and thus error on the estimation of the distance.

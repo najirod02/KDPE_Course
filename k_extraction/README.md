@@ -7,4 +7,8 @@ The expected output is a ipynb file with the analysis. All the code provided can
 ### Small note
 The code has been developed and tested in colab environment using as runtime type `T4 GPU` in order to have more computational power and disk space (which was limited in my local environment). For this reason performances might be different if you try to run it locally.
 
+### Invalid notebook
+Github for some reason doesn't allow to visualize the notebook via web browser giving an error "Invalid notebook". 
+As the notebook has been exported directly from colab, it is better to actually download the file and run it locally or upload it in colab.
+
 [Back to list of assignments](../README.md)
